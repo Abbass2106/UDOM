@@ -1,0 +1,70 @@
+nav{
+    width:100% ;
+    /* removed to make navbar transparent..
+    background:#333 ; */
+    color: white;
+    padding:4px 0;
+    position:fixed;
+    height: 50px;
+    top:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.menu-icon{
+   display: none;
+}
+
+
+/* major screen */
+@media (max-width:1000px){
+    .logo{
+        width: 120px;
+        padding-left: 15px;
+    }
+    nav ul li{
+        margin: 10px 15px ;
+    }
+}
+
+
+/* after resizing to smaller screen */
+@media (max-width:950px){
+    nav{
+        padding:15px;
+    }
+
+    .btn{
+        font-size: 10px;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        /* to make nav out of screen make right= (-width) */
+        right: 0;
+        background: #212EA0;
+        z-index: -1;
+        width: 200px;
+        padding-top: 30px;
+        transition: 0.3s;
+        }  
+    nav ul li{
+        display: block;
+        margin: 20px 40px;
+    }    
+
+    .menu-icon{
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .mobile-menu{
+        right: -200px;
+    }
+}
